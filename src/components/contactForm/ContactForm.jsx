@@ -17,8 +17,6 @@ const FORM_INITIAL_VALUES = {name:"", number:"" }
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-  const nameId = useId();
-  const numberId = useId();
 
   const addNewContact = (formData) => {
     const finalContact = {
@@ -31,7 +29,6 @@ const ContactForm = () => {
     addNewContact(values);
     actions.resetForm();
   };
-
 
   return (
     <Formik 

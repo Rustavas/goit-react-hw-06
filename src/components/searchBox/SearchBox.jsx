@@ -6,7 +6,6 @@ import { changeFilter, selectNameFilter  } from "../../redux/filtersSlice";
 import css from "./SearchBox.module.css";
 
 const SearchBox = () => {
-  const serchId = useId();
   const dispatch = useDispatch();
   const filter = useSelector(selectNameFilter);
 
@@ -23,7 +22,6 @@ const SearchBox = () => {
         type="text"
         placeholder="Search..."
         value={filter}
-        id={serchId}
         onChange={handleChange}
       />
     </section>
